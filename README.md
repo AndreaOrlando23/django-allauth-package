@@ -108,9 +108,7 @@ add to urlpatterns:<br>
 </ul>
 </p>
 
-<h3>Test the app</h3>
-
-<p>run the server and go to admin page</p>
+<h3>Test</h3>
 <ul>
     <li>clone the repo<code>$ git clone git@github.com:AndreaOrlando23/django-allauth-package.git</code></li>
     <li>open the project and run the server <code>$ python manage.py runserver</code></li>
