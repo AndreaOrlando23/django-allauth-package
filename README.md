@@ -11,11 +11,10 @@
 
 <h3>Install Django</h3>
 <p>
-<code>pip install django</code>
+<code>$ pip install django</code>
+</p>
 
-or specifying the version   
-<code>pip install django==3.0</code>
-
+<p>
 install django allauth 
 <code>$ pip install django-allauth</code>   
 </p>
@@ -37,15 +36,15 @@ Within the <code><b>settings.py</b></code> file
 inside the <code>INSTALLED_APPS</code> area add these:
 
 <code>
-'signup',
-'django.contrib.sites',
-'allauth',
-'allauth.account',
-'allauth.socialaccount',
-'allauth.socialaccount.providers.google',
+'signup',<br>
+'django.contrib.sites',<br>
+'allauth',<br>
+'allauth.account',<br>
+'allauth.socialaccount',<br>
+'allauth.socialaccount.providers.google',<br>
 </code>
 
-add the <code>TEMPLATES</code>, <code>AUTHENTICATION_BACKENDS</code>, <code>SITE_ID = 1</code>, <code>SOCIALACCOUNT_PROVIDERS</code> scripts from the documentation <a href="https://django-allauth.readthedocs.io/en/latest/installation.html">documentation</a>
+add the <code>TEMPLATES</code>, <code>AUTHENTICATION_BACKENDS</code>, <code>SITE_ID = 1</code>, <code>SOCIALACCOUNT_PROVIDERS</code> scripts from the <a href="https://django-allauth.readthedocs.io/en/latest/installation.html">allauth documentation</a>
 
 add the <code>LOGIN_REDIRECT_URL = '/'</code> at the end of the <code><b>settings.py</b></code> file
 </p>
@@ -56,11 +55,9 @@ add the <code>LOGIN_REDIRECT_URL = '/'</code> at the end of the <code><b>setting
 </p>
 
 <h3>Django Commands</h3>
-<ul>
-    <li><code>$ python manage.py makemigrations</code></li>
-    <li><code>$ python manage.py migrate</code></li>
-    <li><code>$ python manage.py runserver</code></li>
-</ul>
+<code>$ python manage.py makemigrations</code><br>
+<code>$ python manage.py migrate</code><br>
+<code>$ python manage.py runserver</code><br>
 
 <h3>Create site</h3>
 <p>
@@ -80,11 +77,12 @@ inside the app folder create an <code><b>index.html</b></code> file to override 
 
 import: 
 <code>from django.views.generic import TemplateView</code>
-add to urlpatterns:
-<code>path('', TemplateView.as_view(template_name='signup/index.html'))</code>
+add to urlpatterns:<br>
+<code>path('', TemplateView.as_view(template_name='signup/index.html'))</code><br>
 <code>path('accounts/', include('allauth.urls'))</code>
 
-<h3>settings.py</h3>, <code>TAMPLETES</code> area, set:
+<h3>settings.py</h3>
+<code>TAMPLETES</code> area, set:
 <code>'DIRS': [os.path.join(BASE_DIR, 'tamplates')]</code>
 </p>
 
@@ -109,5 +107,16 @@ add to urlpatterns:
     <li>set provider = Google</li>
     <li>insert your client id and your secret key</li>
     <li>add the sites created (127:0:0:1:8000)</li>
+</ul>
+</p>
+
+<h3>Test the app</h3>
+
+<p>run the server and go to admin page</p>
+<ul>
+    <li>clone the repo<code>$ git clone git@github.com:AndreaOrlando23/django-allauth-package.git</code></li>
+    <li>open the project and run the server <code>$ python manage.py runserver</code></li>
+    <li>go to the link http://127.0.0.1:8000/accounts/login/</li>
+    <li>sign in with google</li>
 </ul>
 </p>
