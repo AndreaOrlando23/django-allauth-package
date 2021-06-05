@@ -35,14 +35,12 @@ Within the <code><b>settings.py</b></code> file
 
 inside the <code>INSTALLED_APPS</code> area add these:
 
-<code>
-'signup',<br>
-'django.contrib.sites',<br>
-'allauth',<br>
-'allauth.account',<br>
-'allauth.socialaccount',<br>
-'allauth.socialaccount.providers.google',<br>
-</code>
+<code>'signup',</code><br>
+<code>'django.contrib.sites',</code><br>
+<code>'allauth',</code><br>
+<code>'allauth.account',</code><br>
+<code>'allauth.socialaccount',</code><br>
+<code>'allauth.socialaccount.providers.google',</code><br>
 
 add the <code>TEMPLATES</code>, <code>AUTHENTICATION_BACKENDS</code>, <code>SITE_ID = 1</code>, <code>SOCIALACCOUNT_PROVIDERS</code> scripts from the <a href="https://django-allauth.readthedocs.io/en/latest/installation.html">allauth documentation</a>
 
