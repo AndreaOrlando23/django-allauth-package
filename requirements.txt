@@ -1,2 +1,2 @@
-django
-django-allauth
+Django==3.2.4
+django-allauth==0.44.0
