@@ -145,7 +145,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # add this from the documentation of allauth package
 SITE_ID = 2
 
-LOGIN_REDIRECT_URL = '/'
+# LOGIN_REDIRECT_URL = '/'
 
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
@@ -164,7 +164,16 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 
-ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_REQUIRED = True  # Set =False by default
+
+
+"""Setting this to “mandatory” requires ACCOUNT_EMAIL_REQUIRED to be True
+When set to “mandatory” the user is blocked from logging in until the email address is verified. 
+Choose “optional” or “none” to allow logins with an unverified e-mail address. 
+In case of “optional”, the e-mail verification mail is still sent, 
+whereas in case of “none” no e-mail verification mails are sent.
+"""
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
